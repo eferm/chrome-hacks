@@ -3,41 +3,19 @@ html:not(.chrome-hacks-off) body > center {
   display: block !important;
   max-width: 65ch !important;
   margin: 0 auto !important;
-  padding-bottom: 16px !important;
+  overflow: hidden !important;
 }
 
-/* Convert outer table to block (it's single-column, so safe) */
+/* Override HN's min-width that prevents shrinking */
 html:not(.chrome-hacks-off) #hnmain {
-  display: block !important;
   min-width: 0 !important;
   width: 100% !important;
-}
-
-html:not(.chrome-hacks-off) #hnmain > tbody,
-html:not(.chrome-hacks-off) #hnmain > tbody > tr {
-  display: block !important;
-}
-
-html:not(.chrome-hacks-off) #hnmain > tbody > tr > td {
-  display: block !important;
-  padding-right: 22px !important;
-}
-
-/* Orange header/footer bars go edge-to-edge */
-html:not(.chrome-hacks-off) #hnmain > tbody > tr > td[bgcolor="#ff6600"],
-html:not(.chrome-hacks-off) #hnmain > tbody > tr:last-child > td {
-  padding-right: 0 !important;
 }
 
 /* Force all nested tables to fit within container */
 html:not(.chrome-hacks-off) #hnmain table {
   width: 100% !important;
   min-width: 0 !important;
-}
-
-/* Override HN's .title { overflow: hidden } that truncates text */
-html:not(.chrome-hacks-off) #hnmain .title {
-  overflow: visible !important;
 }
 
 /* Force indent and vote columns to shrink-wrap their content */
@@ -47,6 +25,12 @@ html:not(.chrome-hacks-off) .fatitem td.votelinks,
 html:not(.chrome-hacks-off) .comment-tree td.votelinks {
   width: 1% !important;
   white-space: nowrap !important;
+}
+
+/* Right padding on content cells */
+html:not(.chrome-hacks-off) .fatitem td:last-child,
+html:not(.chrome-hacks-off) .comment-tree td.default {
+  padding-right: 22px !important;
 }
 
 /* Word wrap in all cells */
