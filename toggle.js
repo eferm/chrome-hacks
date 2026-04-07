@@ -3,7 +3,7 @@ function applyState(enabled) {
 }
 
 chrome.storage.local.get('enabled', ({ enabled = true }) => {
-  applyState(enabled);
+  if (!enabled) applyState(false);
 });
 
 chrome.storage.onChanged.addListener((changes) => {
