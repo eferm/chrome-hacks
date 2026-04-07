@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Hacks",
+  "description": "Personal per-site CSS overrides and JS fixes",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "css": ["sites/news.ycombinator.com/styles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
