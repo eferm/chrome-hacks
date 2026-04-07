@@ -40,6 +40,15 @@ html:not(.chrome-hacks-off) #hnmain .title {
   overflow: visible !important;
 }
 
+/* Force indent and vote columns to shrink-wrap their content */
+html:not(.chrome-hacks-off) .comment-tree td.ind,
+html:not(.chrome-hacks-off) .fatitem td.title:first-child,
+html:not(.chrome-hacks-off) .fatitem td.votelinks,
+html:not(.chrome-hacks-off) .comment-tree td.votelinks {
+  width: 1% !important;
+  white-space: nowrap !important;
+}
+
 /* Word wrap in all cells */
 html:not(.chrome-hacks-off) #hnmain td {
   overflow-wrap: break-word !important;
