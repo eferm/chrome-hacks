@@ -3,10 +3,18 @@
   "name": "Chrome Hacks",
   "description": "Personal per-site CSS overrides and JS fixes",
   "version": "1.0",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Chrome Hacks (click to toggle)"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["*://news.ycombinator.com/*"],
       "css": ["sites/news.ycombinator.com/styles.css"],
+      "js": ["toggle.js"],
       "run_at": "document_start"
     }
   ]
