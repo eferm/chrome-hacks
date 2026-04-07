@@ -7,9 +7,10 @@ chrome.action.onClicked.addListener(async () => {
 });
 
 // Set initial badge on service worker start
-chrome.storage.local.get('enabled', ({ enabled = true }) => {
+(async () => {
+  const { enabled = true } = await chrome.storage.local.get('enabled');
   if (!enabled) {
     chrome.action.setBadgeText({ text: 'OFF' });
     chrome.action.setBadgeBackgroundColor({ color: '#888888' });
   }
-});
+})();
