@@ -18,8 +18,7 @@ html:not(.chrome-hacks-off) #hnmain table {
   min-width: 0 !important;
 }
 
-/* Force indent and vote columns to shrink-wrap their content */
-html:not(.chrome-hacks-off) .comment-tree td.ind,
+/* Force vote/title columns to shrink-wrap. (td.ind sizing is owned by fix.js.) */
 html:not(.chrome-hacks-off) .fatitem td.title:first-child,
 html:not(.chrome-hacks-off) .fatitem td.votelinks,
 html:not(.chrome-hacks-off) .comment-tree td.votelinks {

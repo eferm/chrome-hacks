@@ -17,7 +17,7 @@
     {
       "matches": ["*://news.ycombinator.com/*"],
       "css": ["sites/news.ycombinator.com/styles.css"],
-      "js": ["toggle.js"],
+      "js": ["toggle.js", "sites/news.ycombinator.com/fix.js"],
       "run_at": "document_start"
     }
   ]
